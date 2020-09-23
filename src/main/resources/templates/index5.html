@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+时间：<span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></span>
+<br>
+数字
+<span th:text="${#numbers.formatDecimal(price,1,2)}"></span>
+<br>
+文字：<span th:text="${#strings.abbreviate(str,20)}"></span>
+<br>
+<span th:if="${!#strings.isEmpty(str)}">abc</span>
+<br>
+<span th:text="${#strings.substring(str,0,20)}"></span>
+</body>
+</html>

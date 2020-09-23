@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index3</title>
+</head>
+<body>
+        <h1 th:text="${username}"></h1>
+<!--表单控件赋值-->
+<input type="text" th:value="${username}"><br>
+
+<!--拼接字符串-->
+<span th:text="|欢迎${username}来优就业学习|"></span><br><br>
+        <!--拼接字符串第二种-->
+<span th:text="'欢迎' + ${username} + '来到优就业学习'"></span>
+</body>
+</html>
